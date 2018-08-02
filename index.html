@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Steam Background Finder</title>
+	
+		<!--
+		
+			Steam Background Finder
+			Copyright (C) 2018 Xxmarijnw
+
+			This program is free software: you can redistribute it and/or modify
+			it under the terms of the GNU Affero General Public License as published
+			by the Free Software Foundation, either version 3 of the License, or
+			(at your option) any later version.
+
+			This program is distributed in the hope that it will be useful,
+			but WITHOUT ANY WARRANTY; without even the implied warranty of
+			MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+			GNU Affero General Public License for more details.
+
+			You should have received a copy of the GNU Affero General Public License
+			along with this program.  If not, see <http://www.gnu.org/licenses/>.
+			
+		-->
+
+		<link rel="stylesheet" href="/static/style.css">
+		<link rel="stylesheet"  href="/static/js/pace/themes/pace-theme-minimal.css">
+		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+		<link rel="manifest" href="/site.webmanifest">
+		<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+		<link rel="shortcut icon" href="/favicon.ico">
+		<link href="/static/libraries/fontawesome/css/fontawesome-all.css" rel="stylesheet">
+		<meta name="msapplication-TileColor" content="#da532c">
+		<meta name="msapplication-config" content="/browserconfig.xml">
+		<meta name="theme-color" content="#ffffff">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="Easily find the background on a person's profile on Steam">
+		<meta name="keywords" content="Steam,steam profile background,identify steam background,identify steam profile backgrounds,identify profile background,steam background finder,steambackgroundfinder,findsteambackground,what background has this profile,how to get background from profile,get background from profile,steam backgrounds">
+		<meta name="author" content="Xxmarijnw">
+		<script src="/static/libraries/jquery-3.3.1.min.js"></script>
+		<script src="/static/js/pace/pace.js"></script>
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-111887132-5"></script>
+		<script>
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
+
+		  gtag('config', 'UA-111887132-5');
+		</script>
+		<script src="/static/js/form.js"></script>
+	</head>
+	<body>
+		<div id="bg"></div>
+		<div class="container center">
+			<form id="form" method="POST" enctype='multipart/form-data'>
+				<input type="text" name="url" id="url" placeholder="Vanity ID or SteamID64" autocomplete="off" />
+				<a href="#" id="submit-button" class="submit">
+					<span class="submit-text"><i class="fas fa-search"></i></span>
+				</a>
+			</form>
+			<div id="result">
+				<p id="status"></p>
+				<p id="game"></p>
+				<ul>
+					<li id="smp" class="button first"></li><!--
+					--><li id="sce" class="button"></li><!--
+					--><li id="gis" class="button"></li><!--
+					--><li id="dil" class="button last"></li><!--
+					--><li id="redo" class="button" title="Search another"><a href="https://steambackgroundfinder.com">Search another</a></li>
+				</ul>
+			</div>
+		</div>
+	</body>
+</html>
