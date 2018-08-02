@@ -88,7 +88,7 @@ if(!(array_key_exists('error', $results)) || ($count != '0'))
 		$segments         = explode('/', parse_url($market, PHP_URL_PATH));
 		$market_hash_name = $segments[4];
 		$price_overview   = json_decode(file_get_contents("https://steamcommunity.com/market/priceoverview/?appid=753&currency=1&market_hash_name=".$market_hash_name), true);
-		$price            = (($price_overview['success'] === true) && ($price_overview['lowest_price'] !== null)) ?: ' ('.$price_overview['lowest_price'].')';
+		if (($price_overview['success'] === true) && ($price_overview['lowest_price'] !== null)) { ' ('.$price_overview['lowest_price'].')'; }
 	}
 }
 
