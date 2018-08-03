@@ -163,6 +163,7 @@ li a {
 
 #form {
 	position: relative;
+	margin-top: -23px;
 }
 
 #submit-button {
